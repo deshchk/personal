@@ -1,6 +1,19 @@
 * {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+mark {
+  background:hsl(208, 100%, 94%);
+  padding: 0 .2rem 0 .2rem;
+}
+[x-cloak] {
+  display: none !important;
+}
+@media (max-width: 640px) {
+  header h1 {
+    margin-top: 1.6rem;
+  }
 }
 .nolink,
 .nolink:hover,
@@ -8,14 +21,6 @@
   box-shadow: none;
   background: none;
   color: inherit;
-}
-mark {
-  background:hsl(208, 100%, 94%);
-}
-@media (max-width: 640px) {
-  header h1 {
-    margin-top: 1rem;
-  }
 }
 
 
@@ -37,6 +42,7 @@ h1 {
 .who { font-size: 1.3rem; margin-right: .18rem; }
 
 /*  who icon link and :hover  */
+.who-icons { width: 73px; }
 .who-icon,
 .who-icon:hover {
   display: inline-block;
@@ -74,12 +80,51 @@ section h3 { margin-top: 0; }
 
 /*  abstract  */
 #abstract-section {
+  position: relative;
   margin-top: 2rem;
   padding: 1rem;
   background-color: #f7f7f9;
 }
+.abstract-section p {
+  hyphens: manual;
+}
+.limiter {
+  position: absolute;
+  width: 100%;
+  inset: 0;
+  background: linear-gradient(to top, #f7f7f9 10%, transparent 100%);
+}
+.no-limiter {
+  width: 100%;
+  background: none;
+}
+.limiter span,
+.no-limiter span {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-weight: 800;
+  color: #333;
+  cursor: pointer;
+}
+.limiter span {
+  position: absolute;
+  bottom: .5rem;
+}
+.no-limiter span {
+  position: relative;
+  bottom: -.4rem;
+}
 section a::before { position: relative; right: .2rem; }
 #abstract::before { position: relative; right: -.5rem; }
+
+/*  navigation  */
+#navigation {
+  margin: 2.2rem 0 2rem;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
 
 /*  design thinking sections  */
 .dts-element { margin-top: 2rem; }
@@ -182,4 +227,21 @@ section a::before { position: relative; right: .2rem; }
   color: #ccc;
   text-align: center;
   font-size: 1rem;
+}
+#to-the-top {
+  position: fixed;
+  bottom: 3rem;
+  right: 3rem;
+  background: #f7f7f9;
+  border: 1px solid #f7f7f9;
+  border-radius: .5rem;
+  padding: 1rem;
+  cursor: pointer;
+  opacity: .6;
+  font-weight: 800;
+  transition: opacity .16s;
+}
+#to-the-top:hover {
+  opacity: 1;
+  border: 1px solid #ddd;
 }
