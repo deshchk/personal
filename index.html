@@ -84,10 +84,13 @@
     </section>
 
     <nav id="navigation">
-      <a href="#observation">Portfolio</a>
-      <a href="#interview">Cover Letter</a>
-      <a href="#persona">Resume</a>
-      <a href="#pov">Problem Statement</a>
+      <small>CONTENTS:</small>
+      <div class="links">
+        <a href="#observation" tabindex="0">portfolio</a>
+        <a href="#interview" tabindex="0">cover letter</a>
+        <a href="#persona" tabindex="0">resume</a>
+        <a href="#pov" tabindex="0">problem statement</a>
+      </div>
     </nav>
 
     <!-- empathize -->
@@ -164,7 +167,7 @@
       <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate aliquam reiciendis perferendis placeat at! Doloribus sapiente nam perspiciatis aliquam libero fugiat hic praesentium ad debitis!</p>
 
       <!-- persona / resume -->
-      <section class="dts-element">
+      <section class="dts-element" x-intersect="top = false">
         <div class="dts-element-intro">
           <h5><a id="persona" href="#persona" aria-hidden="true"></a>PERSONA</h5>
           <small>(RESUME)</small>
@@ -172,7 +175,7 @@
       </section>
 
       <!-- point of view / problem statement -->
-      <section class="dts-element">
+      <section class="dts-element" x-intersect="top = false">
         <div class="dts-element-intro">
           <h5><a id="pov" href="#pov" aria-hidden="true"></a>POINT OF VIEW</h5>
           <small>(PROBLEM STATEMENT)</small>
@@ -190,14 +193,14 @@
     <hr>
 
     <!-- prototype & testing -->
-    <section id="prototesting-section" class="design-thinking–section">
+    <section id="prototesting-section" class="design-thinking–section" x-intersect="top = false">
       <h3><a id="prototesting" href="#prototesting" aria-hidden="true"></a>Prototype & Testing</h3>
       <p>Try me :)</p>
     </section>
   </main>
 
 
-  <footer>
+  <footer x-intersect="top = false">
     <hr class="footer-hr">
     <div class="footer-container">
       <!-- mail me -->

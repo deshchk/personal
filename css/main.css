@@ -38,6 +38,7 @@ h1 {
   flex-wrap: wrap;
   align-items: center;
   column-gap: .3rem;
+  margin-top: .6rem;
 }
 
 /*  who – my name  */
@@ -123,7 +124,24 @@ section a::before { position: relative; right: .2rem; }
 
 /*  navigation  */
 #navigation {
-  margin: 2.2rem 0 2rem;
+  margin: 3.2rem 0 3rem;
+  display: flex;
+  justify-content: space-around;
+  gap: .5rem 1.5rem;
+  align-items: center;
+  border: 1px solid #f1f1f1;
+  border-radius: .5rem;
+}
+@media (max-width: 640px) {
+  #navigation {
+    padding: 1rem;
+  }
+}
+nav small {
+  font-size: .9rem;
+  color: #777;
+}
+nav .links {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
