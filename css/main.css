@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 html:focus-within {
   scroll-behavior: smooth;
@@ -90,7 +91,11 @@ section h3 { margin-top: 0; }
 }
 .abstract-section p {
   hyphens: manual;
-  font-weight: 800;
+}
+.para span {
+  font-weight: bold;
+  text-rendering: geometricPrecision;
+  text-shadow: none;
 }
 .limiter {
   position: absolute;
@@ -252,24 +257,19 @@ nav .links {
 }
 #to-the-top {
   position: fixed;
-  bottom: 3rem;
-  right: 3rem;
+  bottom: 5rem;
+  right: -.2rem;
   background: #f7f7f9;
-  border: 1px solid #f7f7f9;
-  border-radius: .5rem;
-  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: .5rem 0 0 .5rem;
+  padding: 1rem 2.2rem 1rem 1rem;
   cursor: pointer;
-  opacity: .6;
+  opacity: .4;
   font-weight: 800;
-  transition: opacity .16s;
+  transition: opacity 1s;
+  color: #999;
 }
 #to-the-top:hover {
   opacity: 1;
-  border: 1px solid #ddd;
-}
-@media (max-width: 600px) {
-  #to-the-top {
-    bottom: 2rem;
-    right: 1.2rem;
-  }
+  transition: opacity .1s;
 }
