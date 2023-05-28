@@ -24,20 +24,24 @@ h1 {
 /*  who  */
 .who-container {
   display: flex;
-  gap: .48rem;
-  margin-top: .2rem;
+  flex-wrap: wrap;
+  align-items: center;
+  column-gap: .3rem;
 }
 
 /*  who – my name  */
 .who { font-size: 1.3rem; margin-right: .18rem; }
 
 /*  who icon link and :hover  */
+.who-icons {
+  margin-top: .08rem;
+}
 .who-icon,
 .who-icon:hover {
   display: inline-block;
-  position: relative;
-  top: .36rem;
   height: 1.3rem;
+  width: 1.31rem;
+  line-height: 1.3rem;
 }
 
 .who-icon:hover svg > circle,
