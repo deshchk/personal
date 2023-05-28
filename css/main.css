@@ -1,0 +1,180 @@
+* {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+}
+.nolink,
+.nolink:hover,
+.nolink:visited {
+  box-shadow: none;
+  background: none;
+  color: inherit;
+}
+mark {
+  background:hsl(208, 100%, 94%);
+}
+
+
+
+/*  H E A D E R  */
+h1 {
+  position: relative;
+  left: -.16rem;
+}
+
+/*  who  */
+.who-container {
+  display: flex;
+  gap: .48rem;
+  margin-top: .2rem;
+}
+
+/*  who – my name  */
+.who { font-size: 1.3rem; margin-right: .18rem; }
+
+/*  who icon link and :hover  */
+.who-icon,
+.who-icon:hover {
+  display: inline-block;
+  position: relative;
+  top: .36rem;
+  height: 1.3rem;
+}
+
+.who-icon:hover svg > circle,
+.who-icon-footer:hover svg > circle { fill: #3000c1; }
+.who-icon:hover svg > path,
+.who-icon-footer:hover svg > path  { stroke: #3000c1; }
+
+/*  who icon svg  */
+.who-icon svg {
+  width: 1.3rem;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.who-icon svg > *,
+.who-icon-footer svg > * { transition: fill .1s, stroke .1s; }
+.who-icon svg > circle,
+.who-icon-footer svg > circle { fill: #0064c1; }
+.who-icon svg > path,
+.who-icon-footer svg > path { stroke: #0064c1; }
+
+/*  who below – location  */
+.who-sub { display: block; color: #888; }
+
+
+
+/*  M A I N  */
+section h3 { margin-top: 0; }
+
+/*  abstract  */
+#abstract-section {
+  margin-top: 2rem;
+  padding: 1rem;
+  background-color: #f7f7f9;
+}
+section a::before { position: relative; right: .2rem; }
+#abstract::before { position: relative; right: -.5rem; }
+
+/*  design thinking sections  */
+.dts-element { margin-top: 2rem; }
+.dts-element h5 { margin: 0; }
+.dts-element-intro {
+  border: 1px dashed hsl(210, 60%, 82%);
+  padding: 1rem;
+  border-radius: .5rem;
+}
+.dts-element-intro a::before { right: -.4rem; }
+.dts-element-intro small {
+  display: block;
+  font-size: .8rem;
+  letter-spacing: .06rem;
+}
+.dts-element-intro p {
+  margin: 1.2rem 0 0 0 ;
+}
+
+/* observation – portfolio */
+.portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem .8rem;
+  margin-top: 2rem;
+}
+.card-link,
+.card-link:hover {
+  color: inherit;
+  cursor: pointer;
+  width: 100%;
+}
+.card {
+  flex: 1 1 44%;
+  margin: 0;
+  border: 1px solid #999;
+  border-radius: .5rem;
+}
+.card:hover:not(.card-nohover) {
+  transform: translate(-3px, -3px);
+  box-shadow: 3px 3px 0 #999;
+}
+.card-caption {
+  padding: .8rem 1.1rem 1rem 1.1rem;
+  line-height: 1.6rem;
+}
+.card h5 { margin: .26rem 0 .5rem; line-height: 1.7rem }
+.card img {
+  border-radius: .4rem .4rem 0 0;
+  object-fit: cover;
+  width: 100%;
+}
+.card small { font-size: 1rem; }
+
+/* ideate */
+#ideate-section pre { margin-bottom: 0; }
+#ideate-section small {
+  margin-top: .2rem;
+  font-size: .8rem;
+  letter-spacing: .06rem;
+  float: right;
+  color: #9dc3e7;
+}
+
+
+
+/*  F O O T E R  */
+.footer-hr {
+  margin-bottom: 0;
+}
+.footer-container {
+  display: flex;
+  column-gap: 1rem;
+  row-gap: .2rem;
+  padding: .2rem;
+  color: #888;
+  flex-wrap: wrap;
+}
+.footer-small {
+  font-weight: 800;
+  letter-spacing: .08rem;
+}
+
+/*  who icons in footer  */
+.who-icon-footer,
+.who-icon-footer:hover {
+  box-shadow: none;
+  background: none;
+  line-height: 1.2rem;
+  height: 1.2rem;
+  margin-top: .09rem;
+}
+.who-icon-footer svg {
+  display: inline-block;
+  vertical-align: -.2rem;
+  width: 1.2rem;
+}
+#bye {
+  margin: 1rem 0 2rem 0;
+  color: #ccc;
+  text-align: center;
+  font-size: 1rem;
+}
