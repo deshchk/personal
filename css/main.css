@@ -33,9 +33,6 @@ h1 {
 .who { font-size: 1.3rem; margin-right: .18rem; }
 
 /*  who icon link and :hover  */
-.who-icons {
-  margin-top: .08rem;
-}
 .who-icon,
 .who-icon:hover {
   display: inline-block;
