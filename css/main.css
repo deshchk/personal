@@ -12,7 +12,11 @@
 mark {
   background:hsl(208, 100%, 94%);
 }
-
+@media (max-width: 640px) {
+  header h1 {
+    margin-top: 1rem;
+  }
+}
 
 
 /*  H E A D E R  */
