@@ -1,6 +1,8 @@
 * {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
+}
+html:focus-within {
   scroll-behavior: smooth;
 }
 mark {
@@ -87,6 +89,7 @@ section h3 { margin-top: 0; }
 }
 .abstract-section p {
   hyphens: manual;
+  font-weight: 800;
 }
 .limiter {
   position: absolute;
