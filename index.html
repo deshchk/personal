@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/main.css">
   <!-- alpineJS -->
+    <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/intersect@3.x.x/dist/cdn.min.js"></script>
     <script src="https://unpkg.com/alpinejs" defer></script>
   <!-- awsm.css -->
   <link href="https://fonts.googleapis.com/css?family=PT+Serif:400,400i,700,700i" rel="stylesheet">
@@ -21,14 +22,15 @@
     <link href="./css/zoom.css" rel="stylesheet">
   <!-- the rest -->
   <script src="./js/main.js"></script>
-    <title>Getting a job 🖊️ Leszczak</title>
+    <title>👉🏻 Daniel Leszczak</title>
 </head>
 
 
 <body x-data="data">
 <div id="container">
   <header>
-    <h1>Getting a job in UX</h1>
+    <h1>Getting a&nbsp;job to use psychology in designing for a&nbsp;better world</h1>
+    <aside>DOI: 10.1023/<wbr>A:1005399417256</aside>
       <div class="who-container">
       <small class="who">Daniel Leszczak</small>
       <div class="who-icons">
@@ -51,29 +53,42 @@
 
   <main>
     <!-- abstract -->
-    <section id="abstract-section">
+    <section id="abstract-section" x-intersect="top = true">
       <h3><a id="abstract" href="#abstract" aria-hidden="true"></a>Abstract</h3>
       <p>
         The subject is a psychologist (<em>MSc</em>; <i>age</i> = 27), researcher, <abbr title="User Experience">UX</abbr> student, 
-        <abbr title="Information Technology">IT</abbr> technician with background in Front-end Development and a creative (music, lyrics, videos, graphics etc.) currently looking for a job.
-      </p>
-        Research shows he loves empathizing with others and gathering insights to better help people and create what's truly <em>desirable</em> to them.
-        He seems to have great analytical skills and be good at complex problem solving.
+        <abbr title="Information Technology">IT</abbr> technician with background in Front-end Development and a creative (music, lyrics, videos, graphics etc.) currently <b>loo</b>king for a job.
+      </p><p x-cloak x-show="!limiter" x-transition:enter.duration.150ms>
+        Research shows he <b>lo</b>ves <b>em</b>pathizing with others and <b>gat</b>hering <b>in</b>sights to better <em>help people</em> and create what's truly <em>desirable</em> to them.
+        He seems to have great <b>an</b>alytical <b>ski</b>lls and be good at <b>co</b>m&shy;plex <b>pro</b>blem <b>sol</b>ving.
         Communication, research, learning and presentation skills appear to be his additional strengths. 
-      </p><p>  
-        He wrote psychological and pedagogical papers, coded his own websites for conducting research at the best possible level, worked in schools and variety of different places with various specialists and goals as a salesman, <abbr title="Information Technology">IT</abbr> technician, psychologist, counselor, freelance: teacher, graphic designer, musician, data analyst and more.
-      </p><p>
-        Daniel is very passionate about <abbr title="User Experience">UX</abbr> and combining the wide arrangement of skills and passions he's acquired.
-        The insights explicitly picture him as someone who'd add value to our team.
+      </p><p x-cloak x-show="!limiter" x-transition:enter.duration.300ms>  
+        He wrote psychological and pedagogical papers, <b>cod</b>ed his own <b>web</b>&shy;sites for conducting <b>res</b>earch at the best possible level, worked in schools and variety of different places with various specialists and goals as a salesman, <abbr title="Information Technology">IT</abbr> technician, psychologist, counselor, freelance: teacher, graphic designer, musician, data analyst and more.
+      </p><p x-cloak x-show="!limiter"  x-transition:enter.duration.450ms>
+        Daniel is very passionate about <abbr title="User Experience"><b>UX</b></abbr> and combining the wide arrangement of skills and passions he's acquired.
+        The insights explicitly picture him as someone who'd <b>a</b>dd value to our team.
       </p>
-      <small><strong>Keywords:</strong> psychologist, researcher, ux freak, creative, front-end dev</small>
+      <small x-cloak x-show="!limiter"  x-transition:enter.duration.600ms>
+        <strong>Keywords:</strong> psychologist, researcher, ux freak, creative, front-end dev
+      </small>
+    <div :class="limiter ? 'limiter' : 'no-limiter'">
+      <span x-cloak x-show="limiter" @click="limiter = !limiter">expand</span>
+      <span x-cloak x-show="!limiter" @click="limiter = !limiter">close</span>
+    </div>
     </section>
+
+    <nav id="navigation">
+      <a href="#observation">Portfolio</a>
+      <a href="#interview">Cover Letter</a>
+      <a href="#persona">Resume</a>
+      <a href="#pov">Problem Statement</a>
+    </nav>
 
     <!-- empathize -->
     <section id="empathize-section" class="design-thinking–section">
       <h3><a id="empathize" href="#empathize" aria-hidden="true"></a>Empathize</h3>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, nemo.</p>
-      <p>Lorem ipsum, dolor sit amet <mark>consectetur adipisicing</mark> elit. Porro et dolore consectetur assumenda, enim inventore. Dolor nostrum ratione cupiditate error qui nisi doloribus rem sunt, nobis dolorum recusandae, rerum ea commodi impedit obcaecati cumque adipisci quod quisquam!</p>
+      <p>We're starting the <mark>Design Thinking</mark> process with
+        observation and interview methods to get a better understanding of the applicant.</p>
 
       <!-- observation / portfolio -->
       <section class="dts-element">
@@ -81,12 +96,7 @@
         <div class="dts-element-intro">
           <h5><a id="observation" href="#observation" aria-hidden="true"></a>OBSERVATION</h5>
           <small>(PORTFOLIO)</small>
-
-          <!-- dts-content -->
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi id dolore unde odit ipsam numquam, minima saepe illo.
-            </p>
-            <aside><strong>click</strong> on one of the cards to see the case study</aside>
+            <aside><strong>click</strong> on a card to see the case study</aside>
         </div>
       
         <div class="portfolio">
@@ -95,17 +105,17 @@
               <img src="https://placehold.co/600x400" alt="Master's thesis – Psychology">
               <div class="card-caption">
                 <h5>Master's thesis – Psychology</h5>
-                <small>Research project, website, video and the thesis itself.</small>
+                <small>Conducting research, coding a website, making a video and writing the thesis.</small>
               </div>
             </a>
           </article>
 
           <article class="card" @click="cardClick($el)">
             <a class="card-link nolink">
-              <img src="https://placehold.co/600x400" alt="ORDR Psychometrics">
+              <img src="https://placehold.co/600x400" alt="ORDR – Psychometrics">
               <div class="card-caption">
-                <h5>ORDR Psychometrics</h5>
-                <small>Construction of the scale, research, diagnosis website and a science paper.</small>
+                <h5>ORDR – Psychometrics</h5>
+                <small>Constructing a scale to measure personality, conducting research and writing a paper.</small>
               </div>
             </a>
           </article>
@@ -114,8 +124,8 @@
             <a class="card-link nolink">
               <img src="https://placehold.co/600x400" alt="">
               <div class="card-caption">
-                <h5>Teachers-Parents Relationships Publication</h5>
-                <small>Construction of the scale, research, diagnosis website and a science paper.</small>
+                <h5>Troubles in Teachers-Parents' Relationships – Publication</h5>
+                <small>Monitoring the diad, expanding observations with empirical data and writing a publication.</small>
               </div>
             </a>
           </article>
@@ -124,7 +134,7 @@
             <img src="https://placehold.co/600x400" alt="">
             <div class="card-caption">
               <h5>Getting a job</h5>
-              <small>This website and the rest is work in progress :)</small>
+              <small x-intersect.full="top = false">This website and the rest is work in progress :)</small>
             </div>
           </article>
         </div>
@@ -201,6 +211,8 @@
       </a>
     </div>
     <div id="bye">I'm so happy you exist! Have a great time!</div>
+    <!-- back to the top button -->
+    <div id="to-the-top" @click="window.scrollTo({top: 0, behavior: 'smooth'})" x-show="!top" x-transition>Top</div>
   </footer>
 </div>
 <!-- I N S T R U C T I O N S -->
