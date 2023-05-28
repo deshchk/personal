@@ -42,12 +42,12 @@ h1 {
 .who { font-size: 1.3rem; margin-right: .18rem; }
 
 /*  who icon link and :hover  */
-.who-icons { width: 73px; }
+.who-icons { width: 74px; }
 .who-icon,
 .who-icon:hover {
   display: inline-block;
   height: 1.3rem;
-  width: 1.31rem;
+  width: 1.32rem;
   line-height: 1.3rem;
 }
 
