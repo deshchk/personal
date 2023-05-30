@@ -125,13 +125,16 @@ section h3 { margin-top: 0; }
   bottom: -.4rem;
 }
 section a::before { position: relative; right: .2rem; }
-#abstract::before { position: relative; right: -.5rem; }
+#abstract::before { position: relative; left: .48rem; }
+@media (max-width: 640px) {
+  #abstract::before { position: relative; left: .39rem; }
+}
 
 /*  navigation  */
 #navigation {
   margin: 3.2rem 0 3rem;
+  padding: 0 .8rem 0 .8rem;
   display: flex;
-  justify-content: space-around;
   gap: .5rem 1.5rem;
   align-items: center;
   border: 1px solid #f1f1f1;
@@ -148,9 +151,9 @@ nav small {
 }
 nav .links {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   flex-wrap: wrap;
-  gap: .5rem 1.5rem;
+  gap: .5rem 1.8rem;
 }
 
 /*  design thinking sections  */
@@ -161,7 +164,10 @@ nav .links {
   padding: 1rem;
   border-radius: .5rem;
 }
-.dts-element-intro a::before { right: -.4rem; }
+.dts-element-intro a::before { left: .39rem; }
+@media (max-width: 640px) {
+  .dts-element-intro a::before { left: .32rem; }
+}
 .dts-element-intro small {
   display: block;
   font-size: .8rem;
@@ -178,27 +184,32 @@ nav .links {
   gap: 1.2rem .8rem;
   margin-top: 2rem;
 }
-.card-link,
-.card-link:hover {
-  color: inherit;
-  cursor: pointer;
-  width: 100%;
-}
 .card {
   flex: 1 1 44%;
   margin: 0;
-  border: 1px solid #999;
+  border: 1px solid #bbb;
   border-radius: .5rem;
 }
 .card:hover:not(.card-nohover) {
   transform: translate(-3px, -3px);
   box-shadow: 3px 3px 0 #999;
 }
+.card-link,
+.card-link:hover {
+  color: inherit;
+  cursor: pointer;
+  width: 100%;
+}
+.card-inside {
+  display: flex;
+  flex-direction: column;
+}
 .card-caption {
   padding: .8rem 1.1rem 1rem 1.1rem;
   line-height: 1.6rem;
 }
 .card h5 { margin: .26rem 0 .5rem; line-height: 1.7rem }
+.card h5 > small { color: #aaa; }
 .card img {
   border-radius: .4rem .4rem 0 0;
   object-fit: cover;
@@ -206,12 +217,28 @@ nav .links {
 }
 .card small { font-size: 1rem; }
 
+@media (max-width: 640px) {
+  .card-inside {
+    flex-direction: row;
+  }
+  .card {
+    flex-basis: auto;
+  }
+  .card img {
+    width: 50%;
+    border-radius: .4rem 0 0 .4rem;
+  }
+}
+
 /* ideate */
-#ideate-section pre { margin-bottom: 0; }
-#ideate-section small {
+#ideate-section pre { margin: 2rem 0 0; }
+.small-float {
+  position: relative;
+  bottom: 1.54rem;
+  right: .6rem;
   margin-top: .2rem;
   font-size: .8rem;
-  letter-spacing: .06rem;
+  letter-spacing: .1rem;
   float: right;
   color: #9dc3e7;
 }
@@ -257,7 +284,7 @@ nav .links {
 }
 #to-the-top {
   position: fixed;
-  bottom: 5rem;
+  bottom: 7rem;
   right: -.2rem;
   background: #f7f7f9;
   border: 1px solid #ddd;
